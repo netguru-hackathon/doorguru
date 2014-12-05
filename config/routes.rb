@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  mount API => '/'
+  mount GrapeSwaggerRails::Engine => '/doc'
+
   resources :doors
 
   get 'doors/:id/open', to: 'doors#open', as: 'open_door'
