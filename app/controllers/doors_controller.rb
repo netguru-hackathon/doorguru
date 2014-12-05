@@ -11,14 +11,14 @@ class DoorsController < ApplicationController
   end
 
   def open
-    # @door.open!
+    @door.open!
     respond_to do |format|
       format.js { render :show }
     end
   end
 
   def close
-    # @door.close!
+    @door.close!
     respond_to do |format|
       format.js { render :show }
     end
