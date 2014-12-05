@@ -1,5 +1,5 @@
 class DoorsController < ApplicationController
-  before_action :set_door, only: [:open, :close, :show, :edit, :update, :destroy]
+  before_action :set_door, only: [:open, :close, :show, :edit, :update, :destroy, :state]
 
   # GET /doors/1
   # GET /doors/1.json
@@ -21,7 +21,12 @@ class DoorsController < ApplicationController
     @door.close!
     respond_to do |format|
       format.json { render json: { state: @door.open? } }
-      # format.js { render :show }
+    end
+  end
+
+  def state
+    respond_to do |format|
+      format.json { render json: { state: @door.open? } }
     end
   end
 
