@@ -13,14 +13,15 @@ class DoorsController < ApplicationController
   def open
     @door.open!
     respond_to do |format|
-      format.js { render :show }
+      format.json { render json: { state: @door.open? } }
     end
   end
 
   def close
     @door.close!
     respond_to do |format|
-      format.js { render :show }
+      format.json { render json: { state: @door.open? } }
+      # format.js { render :show }
     end
   end
 
