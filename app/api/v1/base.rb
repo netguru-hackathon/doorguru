@@ -5,6 +5,6 @@ module V1
 
     version 'v1', using: :path
 
-    mount V1::Door
+    mount V1::Doors
   end
 end
