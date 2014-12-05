@@ -26,7 +26,7 @@ body {
   height: 274px;
   width: 147px;
   margin: 20px;
-  margin-left: 0;
+  margin-left: 50%;
   //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
   border-radius: 3px;
   //Instead of the line below you could use @includebox-sizing($bs)
@@ -87,4 +87,7 @@ body {
     //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
     transform: rotateY(0deg);
   }
+}
+.door-commands{
+  text-align: center;
 }
