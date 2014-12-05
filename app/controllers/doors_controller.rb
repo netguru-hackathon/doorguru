@@ -1,5 +1,28 @@
 class DoorsController < ApplicationController
-  before_action :set_door, only: [:show, :edit, :update, :destroy]
+  before_action :set_door, only: [:open, :close, :show, :edit, :update, :destroy]
+
+  # GET /doors/1
+  # GET /doors/1.json
+  def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @door }
+    end
+  end
+
+  def open
+    # @door.open!
+    respond_to do |format|
+      format.js { render :show }
+    end
+  end
+
+  def close
+    # @door.close!
+    respond_to do |format|
+      format.js { render :show }
+    end
+  end
 
   # GET /doors
   # GET /doors.json
@@ -9,15 +32,6 @@ class DoorsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @doors }
-    end
-  end
-
-  # GET /doors/1
-  # GET /doors/1.json
-  def show
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @door }
     end
   end
 
