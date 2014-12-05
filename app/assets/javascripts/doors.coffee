@@ -3,13 +3,23 @@ $ ->
     $doors = $('.thumb')
 
     if state
-      $doors.removeClass 'thumbOpened'
       $doors.addClass 'thumbOpened'
+      console.log $doors
     else
       $doors.removeClass 'thumbOpened'
 
   $('.js-doors').on 'ajax:success', (e, data) ->
     animateDoors(data['state'])
+
+
+  $('.js-doors').on 'click', (e) ->
+    href = e.target.href
+    window.me = href
+    $.ajax
+      url: href
+      success: (data) ->
+        animateDoors(data['state'])
+      dataType: 'json'
 
   (poll = ->
     setTimeout (->
@@ -22,6 +32,6 @@ $ ->
         complete: poll
 
       return
-    ), 200
+    ), 400
     return
   )()

@@ -52,6 +52,7 @@ body {
   cursor: pointer;
 }
 .thumbOpened {
+  border: 20px solid green;
   //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
   transform: rotateY(-90deg);
   //Instead of the line below you could use @includetransform-origin($origin-x, $origin-y, $origin-z, $only3d)
