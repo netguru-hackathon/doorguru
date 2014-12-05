@@ -1,9 +1,9 @@
 class Door < ActiveRecord::Base
   def open!
-    self.open = true
+    self.update(open: true)
   end
 
   def close!
-    self.open = false
+    self.update(open: false)
   end
 end
