@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  before_filter :close_all_the_doors
+
+  def close_all_the_doors
+    DoorCloser.new.call
+  end
 end
