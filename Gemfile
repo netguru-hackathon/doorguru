@@ -5,6 +5,7 @@ gem 'rails', '4.2.0.rc1'
 gem 'pg'
 
 gem 'coffee-rails', '~> 4.1.0'
+gem 'dotenv-rails'
 gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'grape-swagger-rails'
