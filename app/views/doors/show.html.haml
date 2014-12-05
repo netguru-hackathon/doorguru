@@ -5,5 +5,5 @@
   = render @door
 
 .door-commands
-  = link_to 'Open', open_door_path(@door), remote: true
-  = link_to 'Close', close_door_path(@door), remote: true
+  = link_to 'Open', open_door_path(@door), class: 'js-doors', remote: true
+  = link_to 'Close', close_door_path(@door), class: 'js-doors', remote: true
