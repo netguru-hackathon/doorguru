@@ -6,5 +6,6 @@
 ### Configuration
 
 - Copy `database.yml.sample` to `database.yml`
-- run `bundle rake db:setup`
+- run `bundle exec rake db:setup`
+- copy `.env.sample` to `.env`
 
