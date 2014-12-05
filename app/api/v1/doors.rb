@@ -5,6 +5,7 @@ module V1
       optional :key, type: String, desc: 'api key'
     end
     post '/open', serializer: DoorSerializer do
+      authorize_session!(params[:key])
       door = ::Door.last
       door.open!
       door

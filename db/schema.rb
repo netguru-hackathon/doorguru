@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20141205112538) do
   enable_extension "plpgsql"
 
   create_table "doors", force: true do |t|
-    t.boolean  "open", default: false
+    t.boolean  "open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
