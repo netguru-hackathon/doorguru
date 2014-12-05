@@ -30,6 +30,10 @@ class DoorsController < ApplicationController
     end
   end
 
+  def last
+    redirect_to Door.last
+  end
+
   # GET /doors
   # GET /doors.json
   def index

@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'doors/:id/state', to: 'doors#state', as: 'state'
   get 'doors/:id/open', to: 'doors#open', as: 'open_door'
   get 'doors/:id/close', to: 'doors#close', as: 'close_door'
+
+  root to: 'doors#last'
 end
