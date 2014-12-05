@@ -7,12 +7,12 @@ Our project is intended to help with opening office door. Instead of using key o
 Website works on heroku
   * http://doorguru.herokuapp.com/
 
-2. Environment
-- Ruby: 2.1.5
-- Rails: 4.2.0
+3. Environment
+  * Ruby: 2.1.5
+  * Rails: 4.2.0
 
-3. Configuration
-- Copy `database.yml.sample` to `database.yml`
-- Run `bundle exec rake db:setup`
-- Copy `.env.sample` to `.env`
+4. Configuration
+  * Copy `database.yml.sample` to `database.yml`
+  * Run `bundle exec rake db:setup`
+  * Copy `.env.sample` to `.env`
 
