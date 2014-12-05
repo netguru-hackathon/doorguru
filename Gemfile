@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0'
 gem 'turbolinks'
+gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 
 # gem 'bcrypt', '~> 3.1.7'
