@@ -22,6 +22,6 @@ $ ->
         complete: poll
 
       return
-    ), 1000
+    ), 200
     return
   )()
